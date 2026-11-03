@@ -13,17 +13,11 @@ O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagen
 
 ## ✨ Funcionalidades
 
-- Capa e contracapa personalizadas com identidade visual de Fórmula 1.
-- Logo da F1 e capacete de Ayrton Senna na capa.
-- Efeito de folheio de páginas com a biblioteca `St.PageFlip`.
-- Navegação por setas, teclado e gesto de arraste.
-- 30 figurinhas com nome, categoria e imagem correspondente.
-- Carregamento assíncrono das figurinhas via `fetch`.
-- Imagens ajustadas aos cards sem distorção e sem permitir arraste acidental da imagem.
-- Backend FastAPI com CORS liberado para integração com o frontend.
-- Endpoint individual para cada imagem da figurinha.
-- Layout responsivo para desktop e dispositivos móveis.
-- Sem dependência de áudio ou Web Audio API.
+- 🏎️ Álbum interativo de Fórmula 1 com capa, contracapa e efeito de folheio.
+- 🃏 Catálogo com 30 figurinhas, categorias e imagens organizadas por ID.
+- 🔄 Integração entre frontend JavaScript e API REST em FastAPI.
+- 🖼️ Endpoint próprio para entrega das imagens das figurinhas.
+- 📱 Layout responsivo com navegação por setas, teclado e arraste.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -39,11 +33,11 @@ O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagen
 
 ### ⚙️ Backend
 
-- Python
-- FastAPI
-- Uvicorn
-- `fastapi.middleware.cors.CORSMiddleware`
-- `glob` para localizar as imagens por ID
+- 🐍 Python
+- 🚀 FastAPI
+- 🔥 Uvicorn
+- 🔓 `fastapi.middleware.cors.CORSMiddleware`
+- 🔎 `glob` para localizar as imagens por ID
 
 ### 🤖 Inteligência Artificial
 
