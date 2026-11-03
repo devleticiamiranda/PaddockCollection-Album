@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Album • Fórmula 1</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Arrows -->
+    <button id="btn-prev" class="nav-btn nav-btn-left" aria-label="Página Anterior">
+        <svg viewBox="0 0 24 24" width="36" height="36">
+            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+        </svg>
+    </button>
+    <button id="btn-next" class="nav-btn nav-btn-right" aria-label="Próxima Página">
+        <svg viewBox="0 0 24 24" width="36" height="36">
+            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+    </button>
+
+    <!-- Album Container -->
+    <div class="album-viewport" id="album-viewport">
+        <div class="flip-book" id="book">
+
+            <!-- PAGINA 0: CAPA -->
+            <div class="page page-cover" data-density="hard">
+                <div class="page-content cover-content">
+                    <div class="cover-header">
+                        <span class="cover-seal">COLEÇÃO OFICIAL • F1</span>
+                    </div>
+                    <div class="cover-body">
+                        <div class="f1-brand" aria-label="Fórmula 1">
+                            <img class="f1-logo-image" src="assets/f1-logo.png" alt="F1">
+                        </div>
+                        <h1 class="cover-title"><span class="title-paddock">PADDOCK</span> <span class="title-collection">COLLECTION</span></h1>
+                        <h2 class="cover-subtitle">VELOCIDADE • ESTRATÉGIA • GLÓRIA</h2>
+                        <div class="cover-car-art" aria-label="Carro de Fórmula 1 em alta velocidade">
+                            <div class="car-streak streak-red"></div>
+                            <div class="car-streak streak-gold"></div>
+                            <img class="senna-helmet-image" src="assets/senna-helmet.jpg" alt="Capacete de Ayrton Senna">
+                        </div>
+                    </div>
+                    <div class="cover-footer">
+                        <span>TEMPORADA 2026 • EDIÇÃO ESPECIAL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINA 1: IA -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-ia">Lendas Inesquecíveis</span>
+                        <h3 class="page-title">Os maiores mitos do automobilismo mundial.</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#01</div>
+                            <div class="slot-name">Ayrton Senna</div>
+                            <div class="slot-role">Tricampeão mundial, o rei das poles em Monaco e mestre absoluto sob a chuva.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#02</div>
+                            <div class="slot-name">Michael Schumacher</div>
+                            <div class="slot-role">A máquina alemã que redefiniu o domínio na F1.</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#03</div>
+                            <div class="slot-name">Lewis Hamilton</div>
+                            <div class="slot-role">Heptacampeão mundial, maior vencedor de corridas e recordista de poles da história.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#04</div>
+                            <div class="slot-name">Alain Prost</div>
+                            <div class="slot-role">Tetracampeão mundial conhecido como "O Professor" pela estratégia perfeita.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#05</div>
+                            <div class="slot-name">Niki Lauda</div>
+                            <div class="slot-role">Tricampeão mundial e o maior símbolo de superação do esporte.</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 1</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 2: PYTHON -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-python">Mestres do Grid</span>
+                        <h3 class="page-title">Os donos da pista na era moderna.</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#06</div>
+                            <div class="slot-name">Max Verstappen</div>
+                            <div class="slot-role">Tetracampeão mundial e o mais jovem vencedor da história da F1.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#07</div>
+                            <div class="slot-name">Fernando Alonso</div>
+                            <div class="slot-role">Bicampeão mundial e o piloto com mais GPs disputados na história.</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#08</div>
+                            <div class="slot-name">Charles Leclerc</div>
+                            <div class="slot-role">O velocista das poles com a Scuderia Ferrari e vencedor em sua terra natal.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#09</div>
+                            <div class="slot-name">Lando Norris</div>
+                            <div class="slot-role">O líder da virada da McLaren rumo às vitórias.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#10</div>
+                            <div class="slot-name">George Russell</div>
+                            <div class="slot-role">O piloto da precisão britânica e vencedor de GPs pela Mercedes.</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 2</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 3: BANCO DE DADOS -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-db">Nova Geração</span>
+                        <h3 class="page-title">O futuro da velocidade acelera aqui.</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#11</div>
+                            <div class="slot-name">Yuki Tsunoda</div>
+                            <div class="slot-role">Pilotagem agressiva, carisma gigante e consolidação como força da nova geração.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#12</div>
+                            <div class="slot-name">Liam Lawson</div>
+                            <div class="slot-role">A revelação neozelandesa que conquistou o grid no impacto.</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#13</div>
+                            <div class="slot-name">Oliver Bearman</div>
+                            <div class="slot-role">Estreou pontuando pela Ferrari na Arábia Saudita e assumiu o posto de titular da Haas.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#14</div>
+                            <div class="slot-name">Andrea Kimi Antonelli</div>
+                            <div class="slot-role">A promessa da Mercedes catapultada direto ao topo.</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#15</div>
+                            <div class="slot-name">Isack Hadjar</div>
+                            <div class="slot-role">Pilotagem agressiva e ritmo forte garantindo seu lugar na F1</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 3</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 4: SISTEMAS OPERACIONAIS -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-os">DNA Verde e Amarelo</span>
+                        <h3 class="page-title">Os heróis que levaram o Brasil ao topo.</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#16</div>
+                            <div class="slot-name">Emerson Fittipaldi</div>
+                            <div class="slot-role">O primeiro brasileiro a conquistar o Mundial de F1</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#17</div>
+                            <div class="slot-name">Nelson Piquet</div>
+                            <div class="slot-role">Tricampeão mundial e mestre do acerto técnico</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#18</div>
+                            <div class="slot-name">Rubens Barrichello</div>
+                            <div class="slot-role">Vice-campeão mundial com 11 vitórias e mais de 300 GPs</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#19</div>
+                            <div class="slot-name">Felipe Massa</div>
+                            <div class="slot-role">Vencedor de 11 GPs e herói da final de 2008 em Interlagos</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#20</div>
+                            <div class="slot-name">Gabriel Bortoleto</div>
+                            <div class="slot-role">Campeão da F3 e F2 no grande retorno do Brasil à F1</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 4</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 5: BRASIL - PARTE 1 -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil">Templos e Momentos</span>
+                        <h3 class="page-title">Palcos sagrados e episódios inesquecíveis.</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#21</div>
+                            <div class="slot-name">GP de Interlagos</div>
+                            <div class="slot-role">O templo de São Paulo famoso por decisões dramáticas</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#22</div>
+                            <div class="slot-name">GP de Monaco</div>
+                            <div class="slot-role">A corrida mais charmosa do mundo</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#23</div>
+                            <div class="slot-name">GP de Spa-Francorchamps</div>
+                            <div class="slot-role">A lendária pista da curva Eau Rouge</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#24</div>
+                            <div class="slot-name">A Bandeirada do Título</div>
+                            <div class="slot-role">A consagração máxima ao cruzar a linha como campeão</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#25</div>
+                            <div class="slot-name">GP de Silverstone (O Berço da F1)</div>
+                            <div class="slot-role">O circuito histórico no Reino Unido que sediou o primeiro GP da história da F1 em 1950.</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 5</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 6: BRASIL - PARTE 2 -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil">Mentes Brilhantes</span>
+                        <h3 class="page-title">Os estrategistas por trás do espetáculo.</h3>
+                    </div>
+                    <div class="stickers-grid page-six-grid">
+                        <div class="sticker-slot feature-slot">
+                            <div class="slot-number">#26</div>
+                            <div class="slot-name">Toto Wolff</div>
+                            <div class="slot-role">Guiou a Mercedes a 8 títulos mundiais de construtores consecutivos</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#27</div>
+                            <div class="slot-name">Christian Horner</div>
+                            <div class="slot-role">O comandante que transformou a Red Bull em uma potência multicampeã</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#28</div>
+                            <div class="slot-name">Adrian Newey</div>
+                            <div class="slot-role">O maior projetista da história com mais de 20 títulos no currículo</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#29</div>
+                            <div class="slot-name">Fred Vasseur</div>
+                            <div class="slot-role">O estrategista focado em levar a Ferrari de volta ao topo</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#30</div>
+                            <div class="slot-name">Ron Dennis</div>
+                            <div class="slot-role">O lendário chefe da McLaren que comandou a era de ouro de Senna e Prost</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 6</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 7: CONTRACAPA -->
+            <div class="page page-cover-back" data-density="hard">
+                <div class="page-content cover-back-content">
+                    <div class="cover-back-header">
+                        <img class="back-f1-logo-image" src="assets/f1-logo.png" alt="F1">
+                        <h2>COLEÇÃO DIGITAL OFICIAL</h2>
+                    </div>
+                    <div class="cover-back-body">
+                        <p class="summary-text">
+                            <strong>FÓRMULA 1: PADDOCK COLLECTION</strong><br><br>
+                            Uma coleção digital exclusiva dedicada à paixão, à engenharia e aos momentos inesquecíveis
+                            da Fórmula 1. Dos mitos eternos aos estrategistas dos bastidores, esta obra reúne os 30
+                            maiores ícones que moldaram a história do automobilismo mundial.
+                        </p>
+                    </div>
+                    <div class="cover-back-footer">
+                        <span class="signature">Desenvolvido por Letícia Miranda</span><br>
+                        <span>Edição Digital Oficial • Temporada 2026</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Page Flip Library -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <!-- Logic -->
+    <script src="app.js?v=audio-removed-1"></script>
+</body>
+
+</html>
