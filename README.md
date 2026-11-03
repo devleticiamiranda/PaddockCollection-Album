@@ -1,73 +1,145 @@
-# 🏆 FÓMULA 1- PADDOCK COLECTION
+# Fórmula 1 — Paddock Collection
 
-Um álbum de figurinhas digital e interativo que homenageia pioneiros, personalidades e tecnologias que moldaram a história da computação e do desenvolvimento de software.
+Álbum digital interativo de figurinhas inspirado na Fórmula 1. O projeto apresenta pilotos, circuitos, estrategistas e momentos marcantes do automobilismo em uma experiência visual de álbum físico, com páginas animadas e integração entre frontend e backend.
 
-O projeto recria no navegador a experiência táctil e nostálgica de folhear um álbum físico, combinando animações de física realista, efeitos sonoros sintetizados e integração dinâmica com API backend.
+## Sobre o projeto
 
----
+O objetivo é demonstrar, de forma prática, como uma aplicação web pode separar responsabilidades entre:
 
-## 🎯 Objetivo do Projeto
+- **Frontend:** interface, animações, navegação e montagem visual do álbum.
+- **Backend:** catálogo das figurinhas, categorias, CORS e entrega das imagens por API.
 
-O objetivo principal deste projeto é apresentar uma aplicação web imersiva e visualmente rica para colecionar figurinhas temáticas de tecnologia. Ele demonstra:
-- Estruturação semântica e acessível com **HTML5**.
-- Estilização avançada com sombras, profundidade e efeitos visuais modernos via **Vanilla CSS**.
-- Interatividade, manipulação de DOM e simulação física de folheio com **JavaScript**.
-- Efeitos sonoros gerados dinamicamente via **Web Audio API** (sem dependência de arquivos de áudio externos).
-- Consumo assíncrono de dados através de uma **API REST** (FastAPI).
+O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagens servidas pelo backend através de endpoints próprios.
 
----
+## Funcionalidades
 
-## 🚀 Funcionalidades
+- Capa e contracapa personalizadas com identidade visual de Fórmula 1.
+- Logo da F1 e capacete de Ayrton Senna na capa.
+- Efeito de folheio de páginas com a biblioteca `St.PageFlip`.
+- Navegação por setas, teclado e gesto de arraste.
+- 30 figurinhas com nome, categoria e imagem correspondente.
+- Carregamento assíncrono das figurinhas via `fetch`.
+- Imagens ajustadas aos cards sem distorção e sem permitir arraste acidental da imagem.
+- Backend FastAPI com CORS liberado para integração com o frontend.
+- Endpoint individual para cada imagem da figurinha.
+- Layout responsivo para desktop e dispositivos móveis.
+- Sem dependência de áudio ou Web Audio API.
 
-### 📖 Folheio Realista de Páginas (Flip Book)
-- Animação de dobra e virada realista de páginas com sombras 3D proporcionadas pela biblioteca `St.PageFlip`.
-- Suporte a **arrastar e puxar a página** com mouse no desktop ou touch em dispositivos móveis.
-- Controles de transição inteligente para evitar cliques acidentais e proporcionar uma resposta rápida e suave.
+## Tecnologias utilizadas
 
-### 🕹️ Controles de Navegação
-- **Setas na Interface:** Botões laterais flutuantes para avançar ou retroceder páginas, que se ocultam automaticamente na capa ou na contracapa.
-- **Teclado:** Navegação facilitada com as teclas `ArrowLeft` (página anterior) e `ArrowRight` (próxima página).
+### Frontend
 
-### 🔊 Síntese Sonora (Web Audio API)
-- Geração procedural do som de papel sendo folheado utilizando ruído branco, envelope de volume e filtros passa-banda/passa-baixa.
-- **Botão de Som (Mute/Unmute):** Permite silenciar ou reativar o áudio com feedback visual de ícones.
+- HTML5
+- CSS3
+- JavaScript ES6+
+- CSS Grid e Flexbox
+- SVG para elementos visuais
+- Google Fonts: Inter e Outfit
+- [St.PageFlip](https://github.com/Nodlik/StPageFlip)
 
+### Backend
 
-### 🌐 Integração com Backend
-- Comunica-se de forma assíncrona (`fetch`) com o endpoint `http://localhost:8000/figurinhas`.
-- Identifica os slots existentes via DOM e insere automaticamente a imagem e dados das figurinhas retornadas pelo servidor.
-- Aplica estilos visuais distintos (`.slot-preenchido`) quando a figurinha é carregada com sucesso.
+- Python
+- FastAPI
+- Uvicorn
+- `fastapi.middleware.cors.CORSMiddleware`
+- `glob` para localizar as imagens por ID
 
----
+### Inteligência Artificial
 
-## 📁 Estrutura de Arquivos
+A Inteligência Artificial foi utilizada como apoio no processo criativo e visual do projeto, especialmente para referências e exploração da identidade visual da capa, contracapa e elementos relacionados à Fórmula 1. A aplicação não depende de um modelo de IA para funcionar em tempo de execução.
 
-| Arquivo | Descrição |
-| :--- | :--- |
-| [`index.html`](index.html) | Marcação estrutural do projeto, contendo a capa, páginas temáticas, slots de figurinhas, contracapa e controles de interface. |
-| [`style.css`](style.css) | Estilização completa, variáveis de cores (*Tech Blue*, *Deep Blue*), design responsivo e efeitos de acabamento visual. |
-| [`app.js`](app.js) | Lógica da aplicação: inicialização do folheio, sintetizador de áudio, atalhos de teclado e requisição para a API. |
+## Estrutura do projeto
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5** & **CSS3** (CSS Custom Properties, Flexbox, Grid e Transições)
-- **JavaScript (ES6+)** (Async/Await, Web Audio API, Event Listeners)
-- **[PageFlip (St.PageFlip)](https://github.com/Nodlik/StPageFlip)**: Biblioteca responsável pelo efeito mecânico de páginas de livro.
-- **Google Fonts** (Fontes *Inter* e *Outfit*)
-
----
-
-## 💻 Como Executar
-
-### 1. Frontend
-Basta abrir o arquivo [`index.html`](index.html) em qualquer navegador moderno. Para evitar possíveis bloqueios de CORS ao integrar com a API, recomenda-se utilizar um servidor local (ex: extensão *Live Server* do VS Code ou `npx serve`).
-
-### 2. Backend (Opcional para carregar as imagens das figurinhas)
-Caso deseje conectar ao serviço de figurinhas:
-```bash
-# Exemplo com FastAPI / Uvicorn:
-uvicorn main:app --reload --port 8000
+```text
+ArquiteturaWeb/
+├── index.html                 # Estrutura do álbum e suas páginas
+├── style.css                  # Estilos, grids, capa, contracapa e responsividade
+├── app.js                     # Navegação, PageFlip e integração com a API
+├── README.md                  # Documentação do projeto
+├── assets/
+│   ├── f1-logo.png            # Logo utilizada na capa e contracapa
+│   └── senna-helmet.jpg       # Capacete utilizado na capa
+└── backend/
+    ├── main.py                # Aplicação FastAPI
+    ├── requirements.txt       # Dependências Python
+    └── figurinhas/            # 30 imagens das figurinhas
+        ├── 01-ayrtonsenna.jpg
+        ├── 02-michaelschumacher.jpg
+        └── ...
 ```
-> **Nota:** Caso o backend não esteja ativo, o álbum continuará funcionando normalmente com seus efeitos visuais e slots em modo placeholder.
+
+## Como executar localmente
+
+### 1. Criar ou ativar um ambiente virtual
+
+Na pasta do projeto:
+
+```bash
+python -m venv backend/.venv
+```
+
+No Windows PowerShell:
+
+```powershell
+backend\.venv\Scripts\Activate.ps1
+```
+
+### 2. Instalar as dependências
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+### 3. Iniciar o backend
+
+```bash
+cd backend
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Depois, acesse:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## Endpoints da API
+
+### Listar figurinhas
+
+```http
+GET /figurinhas
+```
+
+Retorna a lista das 30 figurinhas com seus respectivos IDs, nomes, categorias e URLs de imagem.
+
+### Obter imagem por ID
+
+```http
+GET /figurinhas/{id}/imagem
+```
+
+Exemplo:
+
+```text
+http://127.0.0.1:8000/figurinhas/1/imagem
+```
+
+O backend localiza o arquivo cujo nome começa com o ID de dois dígitos, como `01-ayrtonsenna.jpg`.
+
+## Observações para publicação
+
+O GitHub armazena o código, mas não executa o servidor FastAPI. Para colocar a aplicação online, é necessário:
+
+- Hospedar o frontend em um serviço estático, como GitHub Pages.
+- Hospedar o backend em um serviço Python, como Render, Railway, Fly.io ou AWS.
+- Configurar a URL pública da API no frontend quando frontend e backend estiverem em domínios diferentes.
+
+O ambiente virtual `.venv`, a pasta `__pycache__` e arquivos `.pyc` não devem ser enviados ao repositório. As dependências são reproduzidas pelo arquivo `backend/requirements.txt`.
+
+## Autoria
+
+Desenvolvido por **Letícia Miranda**.
+
+Edição Digital Oficial • Temporada 2026
