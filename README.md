@@ -23,21 +23,21 @@ O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagen
 
 ### 🎨 Frontend
 
-- 🧱 HTML5
-- 🎨 CSS3
-- ⚡ JavaScript ES6+
-- 📐 CSS Grid e Flexbox
-- ✏️ SVG para elementos visuais
-- 🔤 Google Fonts: Inter e Outfit
+-  HTML5
+-  CSS3
+-  JavaScript ES6+
+-  CSS Grid e Flexbox
+-  SVG para elementos visuais
+-  Google Fonts: Inter e Outfit
 - [St.PageFlip](https://github.com/Nodlik/StPageFlip)
 
 ### ⚙️ Backend
 
-- 🐍 Python
-- 🚀 FastAPI
-- 🔥 Uvicorn
-- 🔓 `fastapi.middleware.cors.CORSMiddleware`
-- 🔎 `glob` para localizar as imagens por ID
+-  Python
+-  FastAPI
+-  Uvicorn
+-  `fastapi.middleware.cors.CORSMiddleware`
+-  `glob` para localizar as imagens por ID
 
 ### 🤖 Inteligência Artificial
 
