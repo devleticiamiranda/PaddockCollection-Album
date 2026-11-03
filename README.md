@@ -122,15 +122,6 @@ http://127.0.0.1:8000/figurinhas/1/imagem
 
 O backend localiza o arquivo cujo nome começa com o ID de dois dígitos, como `01-ayrtonsenna.jpg`.
 
-## 🚀 Observações para publicação
-
-O GitHub armazena o código, mas não executa o servidor FastAPI. Para colocar a aplicação online, é necessário:
-
-- Hospedar o frontend em um serviço estático, como GitHub Pages.
-- Hospedar o backend em um serviço Python, como Render, Railway, Fly.io ou AWS.
-- Configurar a URL pública da API no frontend quando frontend e backend estiverem em domínios diferentes.
-
-O ambiente virtual `.venv`, a pasta `__pycache__` e arquivos `.pyc` não devem ser enviados ao repositório. As dependências são reproduzidas pelo arquivo `backend/requirements.txt`.
 
 ## 👩‍💻 Autora
 
