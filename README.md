@@ -13,17 +13,17 @@ O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagen
 
 ## ✨ Funcionalidades
 
-- 🖼️ Capa e contracapa personalizadas com identidade visual de Fórmula 1.
-- 🪖 Logo da F1 e capacete de Ayrton Senna na capa.
-- 📖 Efeito de folheio de páginas com a biblioteca `St.PageFlip`.
-- 🕹️ Navegação por setas, teclado e gesto de arraste.
-- 🃏 30 figurinhas com nome, categoria e imagem correspondente.
-- 🔄 Carregamento assíncrono das figurinhas via `fetch`.
-- 📐 Imagens ajustadas aos cards sem distorção e sem permitir arraste acidental da imagem.
-- 🌐 Backend FastAPI com CORS liberado para integração com o frontend.
-- 🖼️ Endpoint individual para cada imagem da figurinha.
-- 📱 Layout responsivo para desktop e dispositivos móveis.
-- 🔇 Sem dependência de áudio ou Web Audio API.
+- Capa e contracapa personalizadas com identidade visual de Fórmula 1.
+- Logo da F1 e capacete de Ayrton Senna na capa.
+- Efeito de folheio de páginas com a biblioteca `St.PageFlip`.
+- Navegação por setas, teclado e gesto de arraste.
+- 30 figurinhas com nome, categoria e imagem correspondente.
+- Carregamento assíncrono das figurinhas via `fetch`.
+- Imagens ajustadas aos cards sem distorção e sem permitir arraste acidental da imagem.
+- Backend FastAPI com CORS liberado para integração com o frontend.
+- Endpoint individual para cada imagem da figurinha.
+- Layout responsivo para desktop e dispositivos móveis.
+- Sem dependência de áudio ou Web Audio API.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -39,11 +39,11 @@ O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagen
 
 ### ⚙️ Backend
 
-- 🐍 Python
-- 🚀 FastAPI
-- 🔥 Uvicorn
-- 🔓 `fastapi.middleware.cors.CORSMiddleware`
-- 🔎 `glob` para localizar as imagens por ID
+- Python
+- FastAPI
+- Uvicorn
+- `fastapi.middleware.cors.CORSMiddleware`
+- `glob` para localizar as imagens por ID
 
 ### 🤖 Inteligência Artificial
 
@@ -138,8 +138,7 @@ O GitHub armazena o código, mas não executa o servidor FastAPI. Para colocar a
 
 O ambiente virtual `.venv`, a pasta `__pycache__` e arquivos `.pyc` não devem ser enviados ao repositório. As dependências são reproduzidas pelo arquivo `backend/requirements.txt`.
 
-## 👩‍💻 Autoria
+## 👩‍💻 Autora
 
 Desenvolvido por **Letícia Miranda**.
 
-Edição Digital Oficial • Temporada 2026
