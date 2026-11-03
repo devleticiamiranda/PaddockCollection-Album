@@ -1,55 +1,55 @@
-# Fórmula 1 — Paddock Collection
+# 🏎️ Fórmula 1 — Paddock Collection
 
 Álbum digital interativo de figurinhas inspirado na Fórmula 1. O projeto apresenta pilotos, circuitos, estrategistas e momentos marcantes do automobilismo em uma experiência visual de álbum físico, com páginas animadas e integração entre frontend e backend.
 
-## Sobre o projeto
+## 🏁 Sobre o projeto
 
 O objetivo é demonstrar, de forma prática, como uma aplicação web pode separar responsabilidades entre:
 
-- **Frontend:** interface, animações, navegação e montagem visual do álbum.
-- **Backend:** catálogo das figurinhas, categorias, CORS e entrega das imagens por API.
+- 🎨 **Frontend:** interface, animações, navegação e montagem visual do álbum.
+- ⚙️ **Backend:** catálogo das figurinhas, categorias, CORS e entrega das imagens por API.
 
 O álbum possui 30 figurinhas distribuídas em categorias temáticas, com imagens servidas pelo backend através de endpoints próprios.
 
-## Funcionalidades
+## ✨ Funcionalidades
 
-- Capa e contracapa personalizadas com identidade visual de Fórmula 1.
-- Logo da F1 e capacete de Ayrton Senna na capa.
-- Efeito de folheio de páginas com a biblioteca `St.PageFlip`.
-- Navegação por setas, teclado e gesto de arraste.
-- 30 figurinhas com nome, categoria e imagem correspondente.
-- Carregamento assíncrono das figurinhas via `fetch`.
-- Imagens ajustadas aos cards sem distorção e sem permitir arraste acidental da imagem.
-- Backend FastAPI com CORS liberado para integração com o frontend.
-- Endpoint individual para cada imagem da figurinha.
-- Layout responsivo para desktop e dispositivos móveis.
-- Sem dependência de áudio ou Web Audio API.
+- 🖼️ Capa e contracapa personalizadas com identidade visual de Fórmula 1.
+- 🪖 Logo da F1 e capacete de Ayrton Senna na capa.
+- 📖 Efeito de folheio de páginas com a biblioteca `St.PageFlip`.
+- 🕹️ Navegação por setas, teclado e gesto de arraste.
+- 🃏 30 figurinhas com nome, categoria e imagem correspondente.
+- 🔄 Carregamento assíncrono das figurinhas via `fetch`.
+- 📐 Imagens ajustadas aos cards sem distorção e sem permitir arraste acidental da imagem.
+- 🌐 Backend FastAPI com CORS liberado para integração com o frontend.
+- 🖼️ Endpoint individual para cada imagem da figurinha.
+- 📱 Layout responsivo para desktop e dispositivos móveis.
+- 🔇 Sem dependência de áudio ou Web Audio API.
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
-### Frontend
+### 🎨 Frontend
 
-- HTML5
-- CSS3
-- JavaScript ES6+
-- CSS Grid e Flexbox
-- SVG para elementos visuais
-- Google Fonts: Inter e Outfit
+- 🧱 HTML5
+- 🎨 CSS3
+- ⚡ JavaScript ES6+
+- 📐 CSS Grid e Flexbox
+- ✏️ SVG para elementos visuais
+- 🔤 Google Fonts: Inter e Outfit
 - [St.PageFlip](https://github.com/Nodlik/StPageFlip)
 
-### Backend
+### ⚙️ Backend
 
-- Python
-- FastAPI
-- Uvicorn
-- `fastapi.middleware.cors.CORSMiddleware`
-- `glob` para localizar as imagens por ID
+- 🐍 Python
+- 🚀 FastAPI
+- 🔥 Uvicorn
+- 🔓 `fastapi.middleware.cors.CORSMiddleware`
+- 🔎 `glob` para localizar as imagens por ID
 
-### Inteligência Artificial
+### 🤖 Inteligência Artificial
 
 A Inteligência Artificial foi utilizada como apoio no processo criativo e visual do projeto, especialmente para referências e exploração da identidade visual da capa, contracapa e elementos relacionados à Fórmula 1. A aplicação não depende de um modelo de IA para funcionar em tempo de execução.
 
-## Estrutura do projeto
+## 📁 Estrutura do projeto
 
 ```text
 ArquiteturaWeb/
@@ -69,9 +69,9 @@ ArquiteturaWeb/
         └── ...
 ```
 
-## Como executar localmente
+## ▶️ Como executar localmente
 
-### 1. Criar ou ativar um ambiente virtual
+### 1️⃣ Criar ou ativar um ambiente virtual
 
 Na pasta do projeto:
 
@@ -85,13 +85,13 @@ No Windows PowerShell:
 backend\.venv\Scripts\Activate.ps1
 ```
 
-### 2. Instalar as dependências
+### 2️⃣ Instalar as dependências
 
 ```bash
 pip install -r backend/requirements.txt
 ```
 
-### 3. Iniciar o backend
+### 3️⃣ Iniciar o backend
 
 ```bash
 cd backend
@@ -104,9 +104,9 @@ Depois, acesse:
 http://127.0.0.1:8000/
 ```
 
-## Endpoints da API
+## 🔌 Endpoints da API
 
-### Listar figurinhas
+### 🃏 Listar figurinhas
 
 ```http
 GET /figurinhas
@@ -114,7 +114,7 @@ GET /figurinhas
 
 Retorna a lista das 30 figurinhas com seus respectivos IDs, nomes, categorias e URLs de imagem.
 
-### Obter imagem por ID
+### 🖼️ Obter imagem por ID
 
 ```http
 GET /figurinhas/{id}/imagem
@@ -128,7 +128,7 @@ http://127.0.0.1:8000/figurinhas/1/imagem
 
 O backend localiza o arquivo cujo nome começa com o ID de dois dígitos, como `01-ayrtonsenna.jpg`.
 
-## Observações para publicação
+## 🚀 Observações para publicação
 
 O GitHub armazena o código, mas não executa o servidor FastAPI. Para colocar a aplicação online, é necessário:
 
@@ -138,7 +138,7 @@ O GitHub armazena o código, mas não executa o servidor FastAPI. Para colocar a
 
 O ambiente virtual `.venv`, a pasta `__pycache__` e arquivos `.pyc` não devem ser enviados ao repositório. As dependências são reproduzidas pelo arquivo `backend/requirements.txt`.
 
-## Autoria
+## 👩‍💻 Autoria
 
 Desenvolvido por **Letícia Miranda**.
 
